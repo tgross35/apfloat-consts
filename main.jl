@@ -122,13 +122,13 @@ end
 function main()
     println("/* automatically generated file */")
 
-    setprecision(BigFloat, 128)
+    setprecision(BigFloat, 100)
     println("\n\n\nmod f16_consts {")
     out = make_single_ty_rust_source("f16", """#[unstable(feature = "f16", issue = "116909")]""")
     println("$(indent(out))")
     println("}")
 
-    setprecision(BigFloat, 256)
+    setprecision(BigFloat, 150)
     println("\n\n\nmod f128_consts {")
     out = make_single_ty_rust_source("f128", """#[unstable(feature = "f128", issue = "116909")]""")
     println("$(indent(out))")
