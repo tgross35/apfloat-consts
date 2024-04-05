@@ -99,7 +99,7 @@ function make_single_const_rust_source(c::Constant, ty::String, attributes::Stri
     s = """
         $doc
         $attributes
-        const $(name(c)): $ty = $(value(c));
+        const $(name(c)): $ty = $(value(c))_$ty;
         """
     return s
 end
