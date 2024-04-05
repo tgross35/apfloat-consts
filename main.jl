@@ -128,7 +128,7 @@ function main()
     println("$(indent(out))")
     println("}")
 
-    setprecision(BigFloat, 150)
+    setprecision(BigFloat, 190)
     println("\n\n\nmod f128_consts {")
     out = make_single_ty_rust_source("f128", """#[unstable(feature = "f128", issue = "116909")]""")
     println("$(indent(out))")
